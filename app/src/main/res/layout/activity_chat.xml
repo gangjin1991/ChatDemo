@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/layout_chat"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="#f3f7f8" >
+
+    <LinearLayout
+        android:id="@+id/rl_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+
+        <!-- 聊天输入框 -->
+        <include
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/custom_facerelativelayout" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/rl_bottom"
+        android:cacheColorHint="#0000"
+        android:divider="@null"
+        android:dividerHeight="5dp"
+        android:scrollbarStyle="outsideOverlay"
+        android:stackFromBottom="true" />
+    <!--insideOverlay：默认值，表示在padding区域内并且覆盖在view上
+    　　insideInset：表示在padding区域内并且插入在view后面
+    　　outsideOverlay：表示在padding区域外并且覆盖在view上，推荐这个
+    　　outsideInset：表示在padding区域外并且插入在view后面-->
+
+</RelativeLayout>
